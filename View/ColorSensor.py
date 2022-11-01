@@ -1,5 +1,5 @@
 from Model import RubiksCube
-import Motor
+from View.Motor import Motor
 
 class ColorSensor(Motor):
     def __init__(self):

@@ -1,8 +1,8 @@
-from View import Motor
+from View.Motor import Motor
 
-class Arm(Motor.Motor):
+class Arm(Motor):
     def __init__(self):
-        Motor.Motor.__init__(self, Port.C)
+        Motor.__init__(self, Port.C)
     def rotateCubeXPrime(self):
         pass
     def lockCube(self):
