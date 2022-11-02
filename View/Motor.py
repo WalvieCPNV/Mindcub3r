@@ -1,7 +1,15 @@
-class Motor:
-    def __init__(self, port) -> None:
-        self.port = port
-    def rotate(self, speed, angle,):
-        motor = Motor(self.port)
-        motor.run_angle(speed, angle)
+
+from pybricks.hubs import EV3Brick
+from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
+                                 InfraredSensor, UltrasonicSensor, GyroSensor)
+from pybricks.parameters import Port, Stop, Direction, Button, Color
+from pybricks.tools import wait, StopWatch, DataLog
+from pybricks.robotics import DriveBase
+from pybricks.media.ev3dev import SoundFile, ImageFile
+
+class MotorClass:
+    def __init__(self, motor):
+        self.motor = motor
+    def rotate(self, speed, angle):
+        self.motor.run_angle(speed, angle)
         

@@ -1,4 +1,6 @@
-from View import Arm, Center, ColorSensor
+from View.Center import Center
+from View.Arm import Arm
+from View.ColorSensor import ColorSensor
 
 
 class ControllerMotor:
