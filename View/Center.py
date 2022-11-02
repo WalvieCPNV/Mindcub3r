@@ -11,4 +11,3 @@ class center(motorClass):
     def rotateCube(self, y):
         angle = 270*y
         motorClass.rotate(self, 300, angle)
-        motorClass

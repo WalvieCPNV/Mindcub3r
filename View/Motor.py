@@ -12,6 +12,4 @@ class motorClass:
         self.motor = motor
     def rotate(self, speed, angle):
         self.motor.run_angle(speed, angle)
-    def hold():
         self.motor.hold()
-        
