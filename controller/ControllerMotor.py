@@ -1,11 +1,11 @@
 from pybricks.tools import wait, StopWatch, DataLog
 
-from View.Center import Center
-from View.Arm import Arm
+from View.Center import center
+from View.Arm import arm
 from View.ColorSensor import colorSensor
 
 
-class ControllerMotor:
+class controllerMotor:
     def __init__(self) -> None:
         pass
     def rotateCubeZ(self):
@@ -18,10 +18,12 @@ class ControllerMotor:
         pass
     def scanCube(self):
         pass
-"""
-testCenter = Center()
-testCenter.rotateCube(1)
 
+"""
+for x in range(0, 10):
+    testCenter = center()
+    testCenter.rotateCube(1)
+    wait(1000)
 testMotorSensor = colorSensor()
 
 

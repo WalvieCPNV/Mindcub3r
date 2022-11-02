@@ -1,4 +1,4 @@
-class Arm:
+class arm:
     def __init__(self):
         pass
     def calculateAlgorythm(self):

@@ -7,9 +7,11 @@ from pybricks.tools import wait, StopWatch, DataLog
 from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 
-class MotorClass:
+class motorClass:
     def __init__(self, motor):
         self.motor = motor
     def rotate(self, speed, angle):
         self.motor.run_angle(speed, angle)
+    def hold():
+        self.motor.hold()
         

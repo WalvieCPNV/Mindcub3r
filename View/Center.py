@@ -2,12 +2,13 @@ from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
                                  InfraredSensor, UltrasonicSensor, GyroSensor)
 from pybricks.parameters import Port, Stop, Direction, Button, Color
 
-from View.Motor import MotorClass
+from View.Motor import motorClass
 
-class Center(MotorClass):
+class center(motorClass):
     def __init__(self):
         motorCenter = Motor(Port.B)
-        MotorClass.__init__(self, motorCenter)
+        motorClass.__init__(self, motorCenter)
     def rotateCube(self, y):
         angle = 270*y
-        MotorClass.rotate(self, 300, angle)
+        motorClass.rotate(self, 300, angle)
+        motorClass

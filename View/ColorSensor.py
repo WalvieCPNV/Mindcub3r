@@ -3,20 +3,20 @@ from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
 from pybricks.parameters import Port, Stop, Direction, Button, Color
 
 from Model import RubiksCube
-from View.Motor import MotorClass
+from View.Motor import motorClass
 
-class colorSensor(MotorClass):
+class colorSensor(motorClass):
     def __init__(self):
         motorSensor = Motor(Port.A)
         #self.colorSensor = Sensor(Port.S1)
-        MotorClass.__init__(self, motorSensor)
+        motorClass.__init__(self, motorSensor)
     def scanColor(self):
         pass
     def rotateToCenter(self):
-        MotorClass.rotate(self, 300, -500)
+        motorClass.rotate(self, 300, -500)
     def rotateToEdge(self):
-        MotorClass.rotate(self, 300, 175)
+        motorClass.rotate(self, 300, 175)
     def rotateToCorner(self):
-        MotorClass.rotate(self, 300, 20)
+        motorClass.rotate(self, 300, 20)
     def resetPosition(self):
-        MotorClass.rotate(self, 300, 325)
+        motorClass.rotate(self, 300, 325)
