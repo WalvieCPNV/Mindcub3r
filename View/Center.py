@@ -6,6 +6,7 @@ from View.Motor import MotorClass
 
 class Center(MotorClass):
     def __init__(self):
+        motorCenter = Motor(Port.B)
         MotorClass.__init__(self, motorCenter)
     def rotateCube(self, y):
         angle = 270*y

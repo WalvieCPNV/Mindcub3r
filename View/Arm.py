@@ -1,12 +1,19 @@
-from View.Motor import Motor
+from pybricks.tools import wait, StopWatch, DataLog
+from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
+                                 InfraredSensor, UltrasonicSensor, GyroSensor)
+from pybricks.parameters import Port, Stop, Direction, Button, Color
 
-class Arm(Motor):
+from View.Motor import MotorClass
+
+class Arm(MotorClass):
     def __init__(self):
-        Motor.__init__(self, Port.C)
+        motorArm = Motor(Port.C)
+        MotorClass.__init__(self, motorArm)
     def rotateCubeXPrime(self):
-        pass
+        MotorClass.rotate(self, 200, 200)
+        MotorClass.rotate(self, 200, -100)
     def lockCube(self):
-        pass
+        MotorClass.rotate(self, 200, 100)
     def releaseCube(self):
-        pass
+        MotorClass.rotate(self, 200, -100)
 
