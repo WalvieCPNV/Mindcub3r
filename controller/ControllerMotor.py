@@ -30,14 +30,24 @@ class controllerMotor:
         wait(200)
         MotorCenter.rotateCube(-2)
     def turnFaceDownPrime(self):
-        pass
+        MotorArm.lockCube()
+        wait(200)
+        MotorCenter.rotateCube(1)
+        wait(200)
+        MotorArm.releaseCube()
     def turnFaceDown(self):
+        MotorArm.lockCube()
+        wait(200)
+        MotorCenter.rotateCube(-1)
+        wait(200)
+        MotorArm.releaseCube()
+    def scanOenFace(self):
         pass
     def scanCube(self):
         pass
 
 test = controllerMotor()
-test.rotateCubeX()
+test.turnFaceDown()
 
 """
 for x in range(0, 10):
