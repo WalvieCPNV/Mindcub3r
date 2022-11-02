@@ -22,7 +22,13 @@ class controllerMotor:
         wait(200)
         MotorCenter.rotateCube(-1)
     def rotateCubeX(self):
-        pass
+        MotorCenter.rotateCube(2)
+        wait(200)
+        MotorArm.rotateCubeXPrime()
+        wait(200)
+        MotorArm.releaseCube()
+        wait(200)
+        MotorCenter.rotateCube(-2)
     def turnFaceDownPrime(self):
         pass
     def turnFaceDown(self):
@@ -31,7 +37,7 @@ class controllerMotor:
         pass
 
 test = controllerMotor()
-test.rotateCubeZ()
+test.rotateCubeX()
 
 """
 for x in range(0, 10):
