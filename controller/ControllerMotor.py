@@ -41,13 +41,22 @@ class controllerMotor:
         MotorCenter.rotateCube(-1)
         wait(200)
         MotorArm.releaseCube()
-    def scanOenFace(self):
-        pass
+
+    def scanOneFace(self):
+        MotorSensor.rotateToCenter()
+        wait(200)
+        #scanColor
+        MotorSensor.rotateToEdge()
+        wait(200)
+        MotorCenter.rotateCube(4)
+        #scan in same time 8 time (have to calculate the time)
+        wait(200)
+        MotorSensor.resetPosition()
     def scanCube(self):
         pass
 
 test = controllerMotor()
-test.turnFaceDown()
+test.scanOneFace()
 
 """
 for x in range(0, 10):
