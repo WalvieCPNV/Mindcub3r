@@ -5,26 +5,40 @@ from View.Arm import arm
 from View.ColorSensor import colorSensor
 
 
+MotorArm = arm()
+MotorSensor = colorSensor()
+MotorCenter = center()
+
+
 class controllerMotor:
-    def __init__(self) -> None:
+    def __init__(self):
         pass
     def rotateCubeZ(self):
-        pass
+        MotorCenter.rotateCube(1)
+        wait(200)
+        MotorArm.rotateCubeXPrime()
+        wait(200)
+        MotorArm.releaseCube()
+        wait(200)
+        MotorCenter.rotateCube(-1)
     def rotateCubeX(self):
         pass
     def turnFaceDownPrime(self):
-        pass   
+        pass
     def turnFaceDown(self):
         pass
     def scanCube(self):
         pass
 
+test = controllerMotor()
+test.rotateCubeZ()
 
+"""
 for x in range(0, 10):
     testCenter = center()
     testCenter.rotateCube(1)
     wait(1000)
-"""
+
 testMotorSensor = colorSensor()
 
 
