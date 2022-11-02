@@ -20,11 +20,20 @@ class controllerMotor:
         pass
 
 
+testColorSensor = colorSensor()
+
+
+while True:
+    testColorSensor.scanColor()
+    wait(1000)
+
+"""
+
 for x in range(0, 10):
     testCenter = center()
     testCenter.rotateCube(1)
     wait(1000)
-"""
+
 testMotorSensor = colorSensor()
 
 
