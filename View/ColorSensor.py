@@ -16,7 +16,8 @@ class colorSensor(motorClass):
         motorClass.rotate(self, 300, -500)
     def rotateToEdge(self):
         motorClass.rotate(self, 300, 175)
-    def rotateToCorner(self):
-        motorClass.rotate(self, 300, 20)
+    def rotateToCorner(self, y):
+        angle = 75*y
+        motorClass.rotate(self, 300, angle)
     def resetPosition(self):
-        motorClass.rotate(self, 300, 325)
+        motorClass.rotate(self, 300, 325) #325
