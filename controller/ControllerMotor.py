@@ -79,10 +79,6 @@ test.scanOneFace()
 #MotorCenter.rotateCube(1)
 #MotorSensor.rotateToEdge()
 
-
-
-
-
 """
 for x in range(0, 10):
     testCenter = center()
