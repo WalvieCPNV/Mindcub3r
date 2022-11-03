@@ -42,39 +42,42 @@ class controllerMotor:
         wait(200)
         MotorArm.releaseCube()
     def scanOneFace(self):
+
         #avance au millieu et scan la couleur
         MotorSensor.rotateToCenter()
         print(MotorSensor.scanColor())
         wait(200)
 
         #se positionne sur le coter
-        MotorSensor.rotateToEdge()
+        MotorSensor.rotateToCornerTarget()
         wait(200)
 
         #scan la couleur et bouge 8x
         for x in range(2,10):
-
-            print(MotorSensor.scanColor())
             MotorCenter.rotateCube(0.5)
+            print(MotorSensor.scanColor())
             wait(100)
 
+            """
             #le 1er vas bcp plus loin jsp pk
             if(x%2 == 0):
-                MotorSensor.rotateToCorner(1)    
+                MotorSensor.rotateToCornerTarget()    
                 print("1")
             else:
-                MotorSensor.rotateToCorner(-1)
+                MotorSensor.rotateToEdge()
                 print("2")
             wait(200)
-        
+            """
         #remet le sensor en position de depart
         MotorSensor.resetPosition()
     def scanCube(self):
         pass
 
 test = controllerMotor()
-#test.scanOneFace()
-MotorSensor.resetPosition()
+test.scanOneFace()
+#MotorSensor.rotateToCorner()
+#MotorCenter.rotateCube(1)
+#MotorSensor.rotateToEdge()
 
 
 

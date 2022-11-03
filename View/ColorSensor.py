@@ -13,11 +13,12 @@ class colorSensor(motorClass):
     def scanColor(self):
         pass
     def rotateToCenter(self):
-        motorClass.rotate(self, 300, -500)
+        motorClass.rotateTarget(self, 300, -550)
     def rotateToEdge(self):
-        motorClass.rotate(self, 300, 175)
-    def rotateToCorner(self, y):
-        angle = 75*y
-        motorClass.rotate(self, 300, angle)
+        motorClass.rotateTarget(self, 300, -380)
+    def rotateToCorner(self):
+        motorClass.rotate(self, 300, 500)
+    def rotateToCornerTarget(self):
+        motorClass.rotateTarget(self, 300, -420)
     def resetPosition(self):
-        motorClass.rotate(self, 300, 325) #325
+        motorClass.rotateTarget(self, 300, 0) #325

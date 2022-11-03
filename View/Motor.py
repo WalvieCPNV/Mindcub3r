@@ -13,3 +13,6 @@ class motorClass:
     def rotate(self, speed, angle):
         self.motor.run_angle(speed, angle)
         self.motor.hold()
+    def rotateTarget(self, speed, position):
+        self.motor.run_target(speed, position)
+        self.motor.hold()
