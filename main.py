@@ -7,8 +7,8 @@ from pybricks.tools import wait, StopWatch, DataLog
 from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 
-from controller import ControllerMotor
-from Model import RubiksCube
+from Controller.ControllerMotor import controllerMotor
+from Model.RubiksCube import rubiksCube
 
 
 # This program requires LEGO EV3 MicroPython v2.0 or higher.
@@ -17,6 +17,23 @@ from Model import RubiksCube
 
 # Create your objects here.
 ev3 = EV3Brick()
+
+
+
+"""
+Tests the setColor method by inserting colors into every face
+
+cube = rubiksCube()
+
+cube.getAlgorythm()
+
+for x in range(1, 7):
+    print(x)
+    for y in range(0, 9):
+        cube.setColor(x)
+
+cube.getAlgorythm()
+"""
 
 
 # Write your program here.

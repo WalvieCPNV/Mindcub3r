@@ -79,7 +79,14 @@ test.scanOneFace()
 #MotorCenter.rotateCube(1)
 #MotorSensor.rotateToEdge()
 
+
 """
+testColorSensor = colorSensor()
+
+while True:
+    testColorSensor.scanColor()
+    wait(1000)
+
 for x in range(0, 10):
     testCenter = center()
     testCenter.rotateCube(1)
