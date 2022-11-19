@@ -71,7 +71,23 @@ class controllerMotor:
         #remet le sensor en position de depart
         MotorSensor.resetPosition()
     def scanCube(self):
-        pass
+        #scan les 4 1er face
+        for x in range(0,3):
+            self.scanOneFace()
+            MotorArm.rotateCubeXPrime()
+            MotorArm.releaseCube()
+        #scan la 5eme face
+        self.rotateCubeZ()
+        self.scanOneFace()
+        #scan la deriere face
+        for x in range(0,2)
+            MotorArm.rotateCubeXPrime()
+            MotorArm.releaseCube()
+            self.scanOneFace()
+        
+        
+        
+
 
 test = controllerMotor()
 test.scanOneFace()
